@@ -1,6 +1,6 @@
 # links
 
-My personal links page for **badnetmask.dev** — a small static site, based on
+My personal links page for [**badnetmask.dev**](https://badnetmask.dev) — a small static site, based on
 [LittleLink](https://github.com/sethcottle/littlelink) (MIT). It is built into a
 static nginx image and published to [`ghcr.io/badnetmask/links`](https://github.com/badnetmask/links/pkgs/container/links).
 
