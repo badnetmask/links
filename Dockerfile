@@ -1,6 +1,6 @@
 # Base pinned to a numbered nginx version; Dependabot bumps it on each new
 # release (see .github/dependabot.yml).
-FROM nginxinc/nginx-unprivileged:1.30.4-alpine
+FROM nginxinc/nginx-unprivileged:1.31.3-alpine
 #
 # The nginx-unprivileged image already:
 #   - runs as the non-root "nginx" user (uid 101)
