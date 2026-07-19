@@ -1,0 +1,13 @@
+badnetmask.dev links site
+Copyright (c) 2026 Mauricio Teixeira
+
+This site is based on the LittleLink project by Seth Cottle
+(https://github.com/sethcottle/littlelink), licensed under the MIT License.
+See licenses/littlelink-MIT.txt for the original license text.
+
+The MakerWorld and Printables button styles and icons are from LittleLink-Server
+by Tim Stewart (https://github.com/timothystewart6/littlelink-server), licensed
+under the MIT License. See licenses/littlelink-server-MIT.txt.
+
+Served by nginx (https://nginx.org/) via the nginx-unprivileged image
+(https://github.com/nginxinc/docker-nginx-unprivileged).

@@ -1,0 +1,10 @@
+.git
+.github
+*.md
+LICENSE
+NOTICE
+licenses
+.gitignore
+.pre-commit-config.yaml
+Dockerfile
+.dockerignore

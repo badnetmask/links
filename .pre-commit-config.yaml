@@ -1,0 +1,7 @@
+# Local secret-scanning hook. Enable once per clone:
+#   pre-commit install
+repos:
+  - repo: https://github.com/betterleaks/betterleaks
+    rev: v1.5.0
+    hooks:
+      - id: betterleaks

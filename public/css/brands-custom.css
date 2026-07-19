@@ -1,0 +1,13 @@
+/* Brand buttons not present in LittleLink core.
+   Styles + matching icons sourced from timothystewart6/littlelink-server (MIT).
+   See NOTICE and licenses/littlelink-server-MIT.txt. */
+
+.button.button-makerworld {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.button.button-printables {
+  color: #000000;
+  background-color: #eb5405;
+}
