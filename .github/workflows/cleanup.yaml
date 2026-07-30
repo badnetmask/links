@@ -4,11 +4,12 @@ name: cleanup
 # (a rollback backup) remain. Runs after a successful build; can also be run
 # manually from the Actions tab.
 #
-# The image is single-arch (amd64) but keeps provenance, so each build produces
-# ~3 GHCR versions (index + image + provenance manifest). We keep 8 so the
-# current image AND a full previous survive intact, with headroom. The official
-# action counts manifests and can't protect a tagged image's children, which is
-# why the count is generous rather than exactly 2.
+# The image is dual-arch (amd64 + arm64) with provenance left on, so each build
+# produces ~5 GHCR versions (1 image index + 1 image manifest per platform + 1
+# provenance attestation per platform). We keep 16 so the current image AND a
+# full previous build survive intact, with headroom. The official action counts
+# manifests and can't protect a tagged image's children, which is why the count
+# is generous rather than an exact 2x multiple.
 
 on:
   workflow_run:
@@ -28,4 +29,4 @@ jobs:
         with:
           package-name: links
           package-type: container
-          min-versions-to-keep: 8
+          min-versions-to-keep: 16
