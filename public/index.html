@@ -60,10 +60,10 @@
               <a class="button button-github" href="https://github.com/badnetmask/" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/github.svg" alt="GitHub Logo">GitHub</a>
 
               <!-- LinkedIn -->
-              <a class="button button-linked" href="https://www.linkedin.com/in/netmask/" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn</a>
+              <a class="button button-linkedin" href="https://www.linkedin.com/in/netmask/" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn</a>
 
               <!-- YouTube -->
-              <a class="button button-yt" href="https://www.youtube.com/@badnetmask" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/youtube.svg" alt="YouTube Logo">YouTube</a>
+              <a class="button button-youtube" href="https://www.youtube.com/@badnetmask" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/youtube.svg" alt="YouTube Logo">YouTube</a>
 
               <!-- MakerWorld -->
               <a class="button button-makerworld" href="https://makerworld.com/@badnetmask" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/makerworld.svg" alt="MakerWorld Logo">MakerWorld</a>
@@ -85,9 +85,10 @@
     <!-- Umami outbound link events (https://docs.umami.is/docs/track-outbound-links) -->
     <script type="text/javascript">
       (() => {
-        const name = 'outbound-link-click';
         document.querySelectorAll('a').forEach(a => {
           if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+            const match = a.className.match(/button-(\S+)/);
+            const name = match ? `outbound-${match[1]}` : 'outbound-link-click';
             a.setAttribute('data-umami-event', name);
             a.setAttribute('data-umami-event-url', a.href);
           }
