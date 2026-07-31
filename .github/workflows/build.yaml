@@ -26,6 +26,9 @@ jobs:
       # NOTE: pin every action to a commit SHA before relying on this workflow;
       # Dependabot then keeps the SHAs updated.
       - uses: actions/checkout@v7
+      - name: Stamp build info
+        run: |
+          sed -i "s/__BUILD_SHA__/${GITHUB_SHA::7}/" public/index.html
       - uses: docker/setup-qemu-action@v4
         with:
           platforms: arm64
